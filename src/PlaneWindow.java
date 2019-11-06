@@ -59,7 +59,6 @@ public class PlaneWindow extends javax.swing.JFrame {
             System.out.println("ready");
             
             initComponents();
-            getConnection();
             Show_JTable();
         } catch (NotBoundException ex) {
             Logger.getLogger(PlaneWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -387,7 +386,6 @@ Show_JTable();
 
     private void deletebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebuttonActionPerformed
         if(!txt_id.getText().equals("")){
-            Connection con = getConnection();
             try {
                 pemesanan.delete(Integer.parseInt(txt_id.getText()));
                 
@@ -427,16 +425,7 @@ Show_JTable();
     /**
      * @return 
      */
-    public Connection getConnection(){
-        Connection conn=null;
-        try {
-            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/products_db", "root", "");
-            return conn;
-        } catch (SQLException ex) {
-            Logger.getLogger(PlaneWindow.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
-        }
-    }
+   
     //Resize Image
 //    String imgPath = null;
 //    public ImageIcon Resize(String imagePath, byte[] pic){

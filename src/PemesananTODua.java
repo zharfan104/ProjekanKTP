@@ -5,7 +5,8 @@ public class PemesananTODua implements java.io.Serializable{
     private PembeliTODua pembeli;
     private String jam;
     private String tanggal;
-    
+          private static final long serialVersionUID = 6529685098267757690L;
+
     public PemesananTODua(){
         
     }

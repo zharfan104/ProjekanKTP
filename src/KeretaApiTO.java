@@ -1,4 +1,6 @@
 public class KeretaApiTO implements java.io.Serializable{
+          private static final long serialVersionUID = 6529685098267757690L;
+
     private int id;
     private String nama;
     
